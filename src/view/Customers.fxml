@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="735.0" prefWidth="865.0" style="-fx-background-color: black; -fx-border-color: #f2ee0a;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomersController">
+   <children>
+      <Label layoutX="301.0" layoutY="14.0" prefHeight="70.0" prefWidth="263.0" text="Customer Information" textFill="#f2ee0a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="customerTableView" layoutX="8.0" layoutY="289.0" prefHeight="438.0" prefWidth="849.0">
+        <columns>
+          <TableColumn fx:id="IDCol" prefWidth="110.0" text="Customer ID" />
+          <TableColumn fx:id="nameCol" prefWidth="123.0" text="Name" />
+            <TableColumn fx:id="addressCol" prefWidth="168.0" text="Address" />
+            <TableColumn fx:id="postalCodeCol" prefWidth="114.0" text="Postal Code" />
+            <TableColumn fx:id="telephoneCol" prefWidth="127.0" text="Telephone" />
+            <TableColumn fx:id="firstLevelCol" prefWidth="99.0" text="Division ID" />
+            <TableColumn fx:id="countryCol" prefWidth="107.0" text="Country" />
+        </columns>
+      </TableView>
+      <Button fx:id="addButton" layoutX="14.0" layoutY="84.0" mnemonicParsing="false" onAction="#onAdd" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #f2ee0a;" text="Add">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="174.0" layoutY="84.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #f2ee0a;" text="Delete">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateButton" layoutX="14.0" layoutY="141.0" mnemonicParsing="false" onAction="#onUpdate" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #f2ee0a;" text="Update">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButton" layoutX="174.0" layoutY="141.0" mnemonicParsing="false" onAction="#onBack" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #f2ee0a;" text="Back">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="325.0" layoutY="82.0" prefHeight="17.0" prefWidth="22.0" text="ID" textFill="#f2ee0a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="390.0" layoutY="162.0" prefHeight="20.0" prefWidth="74.0" text="Telephone" textFill="#f2ee0a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="593.0" layoutY="119.0" prefHeight="20.0" prefWidth="82.0" text="Postal Code" textFill="#f2ee0a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="319.0" layoutY="119.0" prefHeight="20.0" prefWidth="56.0" text="Address" textFill="#f2ee0a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="593.0" layoutY="82.0" prefHeight="20.0" prefWidth="41.0" text="Name" textFill="#f2ee0a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="customerID" editable="false" layoutX="384.0" layoutY="79.0" prefHeight="25.0" prefWidth="200.0" promptText="Auto" />
+      <TextField fx:id="customerName" layoutX="673.0" layoutY="80.0" prefHeight="25.0" prefWidth="178.0" />
+      <TextField fx:id="customerAddress" layoutX="384.0" layoutY="116.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="customerPostalCode" layoutX="673.0" layoutY="116.0" prefHeight="25.0" prefWidth="178.0" />
+      <TextField fx:id="customerTelephone" layoutX="502.0" layoutY="160.0" prefHeight="25.0" prefWidth="200.0" />
+      <ComboBox fx:id="customerCountry" layoutX="427.0" layoutY="206.0" onAction="#onCustomerCountry" prefWidth="150.0" promptText="Country" style="-fx-background-color: #f2ee0a;" />
+      <ComboBox fx:id="customerDiv" layoutX="614.0" layoutY="206.0" prefWidth="150.0" promptText="Division" style="-fx-background-color: #f2ee0a;" />
+      <Button fx:id="editButton" layoutX="93.0" layoutY="84.0" mnemonicParsing="false" onAction="#onEdit" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #f2ee0a;" text="Edit">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
